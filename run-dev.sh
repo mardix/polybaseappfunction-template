@@ -6,5 +6,5 @@ export FLASK_APP=main.py
 export FLASK_RUN_PORT=5001
 
 # App specific vars
-export APP_ENV=sit
+export APP_ENV=development
 flask run
