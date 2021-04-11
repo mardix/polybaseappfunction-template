@@ -56,7 +56,7 @@ def split_list(lst, n):
 #------------------------------------------------------------------------------
 # Rejam API
 #
-class RejamClientException(Exception): pass
+class RejamException(Exception): pass
 
 class Rejam(object):
     """
@@ -111,7 +111,7 @@ class Rejam(object):
         """
         url = self.url
         headers = {
-            "X-REJAMIO-ACCESS-KEY": self.access_key
+            "X-REJAM-ACCESS-KEY": self.access_key
         }
         data = {
             **kw,
@@ -126,4 +126,4 @@ class Rejam(object):
                 msg = _d["error"]["message"]
             else:
                 msg = "[%s]" % r.status_code
-            raise RejamClientException(msg)
+            raise RejamException(msg)  
