@@ -1,0 +1,22 @@
+# Polybox 
+# https://github.com/mardix/polybox
+# An itty-bitty PaaS that uses git push to deploy micro-services 
+# and websites on your own servers 
+
+---
+name: 
+description: 
+version: 1.0.0
+apps:
+  - name: 
+    server_name: 
+    runtime: python
+    auto_restart: true
+    env:
+      APP_ENV: development
+    process:
+      web: main:app
+    scripts:
+      release:
+        - python main.py --fn=hello
+        
